@@ -1,0 +1,301 @@
+<!--
+    ================================================================
+    Portfolio Home Page (index.html)
+    ----------------------------------------------------------------
+    Structure overview:
+      1. <head>   - meta tags, page title, Bootstrap + custom CSS
+      2. <header> - shared site navigation (same on every page)
+      3. <main>
+           a. Hero section         - intro, CTA buttons, skill tags, photo
+           b. Quick stats section  - 3 number highlights
+           c. Contribution section - 3 cards on what Atharva offers
+           d. Featured projects    - 2 project preview cards
+           e. Closing CTA          - final call-to-action for recruiters
+      4. <footer> - shared site footer (same on every page)
+    Uses Bootstrap 5's grid system (container/row/col-*) for layout,
+    with custom classes (defined in style.css) for colors/spacing/cards.
+    ================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic page settings and SEO description for the home page. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This description shows up in search engine results, so it summarizes who Atharva is and his key skills. -->
+    <meta name="description"
+        content="Atharva is an aspiring full stack developer skilled in HTML, CSS, Bootstrap, JavaScript, Python, Django and MySQL.">
+    <!-- Title shown in the browser tab. -->
+    <title>Atharva | Aspiring Full Stack Developer</title>
+    <!-- Bootstrap provides the responsive grid and common layout helpers. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for colors, cards, buttons, animations and responsive design. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ============================================================ -->
+    <!-- Shared top navigation used across all pages. The active link shows the current page. -->
+    <!-- ============================================================ -->
+    <header class="site-nav">
+        <div class="container nav-inner">
+            <!-- Site logo/name that links back to the home page. -->
+            <a class="brand" href="index.html">Atharva<span>.</span></a>
+            <!-- Main navigation links. "active" class highlights which page the user is currently on. -->
+            <nav class="nav-links" aria-label="Main navigation">
+                <a class="active" href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ============================================================ -->
+        <!-- Hero section: first impression with role, short intro, main actions and profile image. -->
+        <!-- ============================================================ -->
+        <section class="hero">
+            <div class="container">
+                <!-- Bootstrap row/col grid: text content on the left (col-lg-6), image on the right (col-lg-5). -->
+                <div class="row align-items-center">
+
+                    <!-- LEFT COLUMN: Intro text, buttons, and skill tags -->
+                    <div class="col-lg-6">
+                        <!-- Small label above the main heading to catch attention. -->
+                        <span class="eyebrow">Open to internships and fresher roles</span>
+
+                        <!-- Main heading introducing Atharva and his role. -->
+                        <h1 class="hero-title">Hi, I am <span class="highlight">Atharva Halam</span>, an aspiring full
+                            stack
+                            developer.</h1>
+
+                        <!-- Short paragraph summarizing current frontend skills and backend skills being learned. -->
+                        <p class="lead-text">
+                            I am a passionate and motivated fresher with experience in building responsive websites
+                            using HTML, CSS, and Bootstrap. I have basic knowledge of Java and C++. Currently, I am
+                            learning JavaScript and plan to learn React next to strengthen my frontend development
+                            skills. After that, I will continue with backend development using Python, Django, and MySQL
+                            to build full-stack web applications. I am eager to enhance my technical skills, work on
+                            real-world projects, and build a successful career as a full stack developer.
+
+                        </p>
+
+                        <!-- Call-to-action buttons: view projects, contact, and LinkedIn profile. -->
+                        <div class="hero-actions">
+                            <a class="btn-main" href="projects.html">View Projects</a>
+                            <a class="btn-soft" href="contact.html">Contact Me</a>
+                            <!-- target="_blank" opens LinkedIn in a new tab; rel="noopener" is a security best practice for external links. -->
+                            <a class="btn-soft" href="https://www.linkedin.com/in/atharv-halam-618b17366/"
+                                target="_blank" rel="noopener">LinkedIn</a>
+                        </div>
+
+                        <!-- Row of small tags/badges listing the tech stack Atharva works with. -->
+                        <div class="tag-list">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Bootstrap</span>
+                            <span>JavaScript</span>
+                            <span>React</span>
+                            <span>Java</span>
+                            <span>C++</span>
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>MySQL</span>
+                            <span>GitHub</span>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN: Profile image and a small floating card with quick focus notes. -->
+                    <!-- offset-lg-1 pushes this column slightly right, adding visual spacing from the text. -->
+                    <div class="col-lg-5 offset-lg-1">
+                        <div class="visual-panel">
+                            <!-- Main profile/hero image showing a developer workspace. -->
+                            <img class="profile-photo" src="/image.png" alt="Developer workspace with laptop and code">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- Quick stats section that summarizes experience, skills and mindset. -->
+        <!-- Three equal columns (col-md-4) each showing a number + short description. -->
+        <!-- ============================================================ -->
+        <section class="section-sm">
+            <div class="container">
+                <!-- "g-4" adds equal gutter spacing (gap) between the 3 stat columns below. -->
+                <div class="row g-4">
+                    <!-- Stat 1: number of projects built -->
+                    <div class="col-md-4">
+                        <div class="card-box number-card">
+                            <strong>2+</strong>
+                            <h3>Projects Built</h3>
+                            <p>Developed a Personal Portfolio Website and a Phishing Awareness Website using HTML, CSS,
+                                and Bootstrap. These projects helped me practice responsive web design, clean page
+                                layouts, Bootstrap components, and creating user-friendly interfaces.</p>
+                        </div>
+                    </div>
+                    <!-- Stat 2: number of skills practiced -->
+                    <div class="col-md-4">
+                        <div class="card-box number-card">
+                            <strong>8+</strong>
+                            <h3>Skills Practiced</h3>
+                            <p>Practiced building responsive web pages using HTML, CSS, and Bootstrap. Gained basic
+                                programming knowledge in Java and C++, and developed an understanding of responsive
+                                design, web page structure, and frontend development fundamentals.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Stat 3: learning mindset / attitude -->
+                    <div class="col-md-4">
+                        <div class="card-box number-card">
+                            <strong>100%</strong>
+                            <h3>Learning Mindset</h3>
+                            <p>Continuously improving my skills by building practical projects, exploring new web
+                                technologies, and gaining hands-on experience through consistent practice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- Contribution section: explains what value Atharva can bring as a fresher. -->
+        <!-- Three cards (col-lg-4 each) covering frontend, backend and workflow strengths. -->
+        <!-- ============================================================ -->
+        <section class="section">
+            <div class="container">
+                <!-- Section heading + intro text, centered above the cards. -->
+                <div class="section-heading center">
+                    <h2>What I Can Contribute</h2>
+                    <p>As a fresher, I contribute a strong willingness to learn, a solid foundation in frontend
+                        development, and a commitment to building clean, responsive, and user-friendly web pages.</p>
+                </div>
+                <div class="row g-4">
+                    <!-- Card 1: Frontend / responsive UI skills -->
+                    <div class="col-lg-4">
+                        <div class="card-box">
+                            <h3>Responsive UI Development</h3>
+                            <p>Built responsive and mobile-friendly web pages using HTML, CSS, Bootstrap, and applied
+                                JavaScript to add basic interactivity and improve the user experience.</p>
+                        </div>
+                    </div>
+                    <!-- Card 2: Backend learning (Django, MySQL, etc.) -->
+                    <div class="col-lg-4">
+                        <div class="card-box">
+                            <h3>Team Contribution</h3>
+                            <p>Ready to contribute by learning quickly, adapting to new technologies, collaborating with
+                                team members, and completing assigned tasks with dedication and attention to detail.</p>
+                        </div>
+                    </div>
+                    <!-- Card 3: Workflow / project management habits (Git, documentation) -->
+                    <div class="col-lg-4">
+                        <div class="card-box">
+                            <h3>Project Ownership</h3>
+                            <p>Organize project files, maintain clean and readable code, and use Git and GitHub to
+                                manage and share projects while continuously improving through feedback.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- Featured project preview cards with links to the full projects page. -->
+        <!-- Two cards side by side (col-lg-6 each) showing project image, title, description and tags. -->
+        <!-- ============================================================ -->
+        <section class="section-sm">
+            <div class="container">
+                <!-- Section heading + intro text, centered above the project cards. -->
+                <div class="section-heading center">
+                    <h2>Featured Projects</h2>
+                    <p>Projects that highlight my technical skills, creativity, and continuous learning through hands-on
+                        development.</p>
+                </div>
+                <div class="row g-4">
+                    <!-- Project 1: Personal Portfolio Website -->
+                    <div class="col-lg-6">
+                        <article class="project-card">
+                            <img src="images/ChatGPT Image Jul 9, 2026, 08_02_37 PM.png"
+                                alt="Portfolio website planning on a desk">
+                            <div class="project-body">
+                                <h3>Personal Portfolio Website</h3>
+                                <p>Created a responsive portfolio website to showcase my skills, projects, and web
+                                    development journey while practicing modern frontend development techniques.</p>
+                                <!-- Tags showing the technologies used in this specific project. -->
+                                <div class="tag-list">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>Bootstrap</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Project 2: Phishing Awareness -->
+                    <div class="col-lg-6">
+                        <article class="project-card">
+                            <img src="/images/ChatGPT Image Jul 8, 2026, 10_04_07 PM.png"
+                                alt="Online shopping interface on a laptop">
+                            <div class="project-body">
+                                <h3>Phishing Awareness</h3>
+                                <p>Learn how to recognize phishing emails, fake websites, and scam messages. Verify
+                                    senders, avoid suspicious links, and never share passwords, OTPs, PINs, or banking
+                                    details to keep your personal information safe online.</p>
+                                <!-- Tags showing the technologies used in this specific project. -->
+                                <div class="tag-list">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>Bootstrap</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <!-- Button linking to the full projects page for more details. -->
+                <div class="action-row justify-content-center">
+                    <a class="btn-main" href="projects.html">See Project Details</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- Final call-to-action section encouraging recruiters to connect. -->
+        <!-- ============================================================ -->
+        <section class="section">
+            <div class="container">
+                <div class="card-box text-center">
+                    <!-- Small label above the closing heading. -->
+                    <span class="eyebrow">Ready to learn and contribute</span>
+                    <!-- Main closing message aimed at recruiters/employers. -->
+                    <!-- "mt-3" is a Bootstrap margin-top utility for spacing below the eyebrow label. -->
+                    <h2 class="mt-3">Looking for an internship or entry-level developer opportunity.</h2>
+                    <!-- "mx-readable" (custom class) caps the paragraph width so long text stays easy to read. -->
+                    <p class="mx-readable">Seeking an internship or entry-level developer role where I can apply my
+                        skills, gain hands-on experience, learn from experienced developers, and contribute to
+                        real-world projects.</p>
+                    <!-- Final set of action buttons: contact page, LinkedIn, and skills page. -->
+                    <div class="action-row justify-content-center">
+                        <a class="btn-main" href="contact.html">Let's Connect</a>
+                        <a class="btn-soft" href="https://www.linkedin.com/in/atharv-halam-618b17366/" target="_blank"
+                            rel="noopener">LinkedIn Profile</a>
+                        <a class="btn-soft" href="skills.html">View Skills</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================================ -->
+    <!-- Shared footer used at the bottom of every page. -->
+    <!-- ============================================================ -->
+    <footer class="footer">
+        <div class="container">
+            <p>Designed and developed by Atharva. 2026.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

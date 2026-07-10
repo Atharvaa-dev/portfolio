@@ -1,0 +1,196 @@
+<!--
+    ================================================================
+    Contact Page (contact.html)
+    ----------------------------------------------------------------
+    Structure overview:
+      1. <head>   - meta tags, page title, Bootstrap + custom CSS
+      2. <header> - shared site navigation ("Contact" marked active)
+      3. <main>
+           a. Intro section     - heading + short summary (centered)
+           b. Contact details   - left: info cards (email/location/availability/profiles),
+                                  right: mailto-based message form
+           c. Closing CTA       - final call-to-action with quick links
+      4. <footer> - shared site footer (same on every page)
+    Uses Bootstrap 5's grid system (container/row/col-*) for layout,
+    with custom classes (defined in style.css) for colors/spacing/cards.
+    ================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic page settings and SEO description for the Contact page. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact Atharva for internship, fresher developer and web development opportunities.">
+    <title>Contact | Atharva</title>
+    <!-- Bootstrap supports the responsive grid and form styling helpers. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Main custom stylesheet shared across the portfolio. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ============================================================ -->
+    <!-- Shared site navigation. The Contact link is marked active on this page. -->
+    <!-- ============================================================ -->
+    <header class="site-nav">
+        <div class="container nav-inner">
+            <!-- Logo/brand link back to the home page. -->
+            <a class="brand" href="index.html">Atharva<span>.</span></a>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <!-- "active" class highlights that the user is currently on the Contact page. -->
+                <a class="active" href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ============================================================ -->
+        <!-- Page intro section that explains what kind of opportunities are welcome. -->
+        <!-- text-center centers all content in this section. -->
+        <!-- ============================================================ -->
+        <section class="section text-center">
+            <div class="container">
+                <!-- Small label above the heading. -->
+                <span class="eyebrow">Contact</span>
+                <!-- Main page heading with a highlighted phrase for emphasis. -->
+                <h1 class="page-title">Let's connect for <span class="highlight">entry-level software developer
+                        opportunities</span>.</h1>
+                <!-- Short intro paragraph; "mx-readable" likely limits line width for easier reading. -->
+                <p class="lead-text mx-readable">I am open to internship and entry-level software developer
+                    opportunities where I can apply my skills, contribute to real-world projects, and continue learning
+                    and growing as a software developer.</p>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- Contact details and email form section. -->
+        <!-- Left side: quick contact info cards (col-lg-5). Right side: message form (col-lg-7). -->
+        <!-- ============================================================ -->
+        <section class="section-sm">
+            <div class="container">
+                <div class="row g-4">
+
+                    <!-- LEFT COLUMN: direct contact information and profile links, -->
+                    <!-- stacked as a nested row of full-width (col-12) boxes. -->
+                    <div class="col-lg-5">
+                        <!-- Nested row of full-width (col-12) boxes, stacked vertically within this column. -->
+                        <div class="row g-4">
+                            <!-- Email contact box -->
+                            <div class="col-12">
+                                <div class="contact-box">
+                                    <h3>Email</h3>
+                                    <!-- mailto: link opens the visitor's default email app addressed to Atharva. -->
+                                    <p><a class="contact-link"
+                                            href="mailto:atharvahalam4@gmail.com">atharvahalam4@gmail.com</a></p>
+                                </div>
+                            </div>
+                            <!-- Location box -->
+                            <div class="col-12">
+                                <div class="contact-box">
+                                    <h3>Location</h3>
+                                    <p>Mumbai</p>
+                                </div>
+                            </div>
+                            <!-- Availability box -->
+                            <div class="col-12">
+                                <div class="contact-box">
+                                    <h3>Availability</h3>
+                                    <p>Open for internships, fresher roles and guided project work.</p>
+                                </div>
+                            </div>
+                            <!-- Social/profile links box -->
+                            <div class="col-12">
+                                <div class="contact-box">
+                                    <h3>LinkedIn</h3>
+                                    <!-- Opens LinkedIn in a new tab; rel="noopener" is a security best practice for target="_blank" links. -->
+                                    <p><a class="contact-link"
+                                            href="https://www.linkedin.com/in/atharv-halam-618b17366/" target="_blank"
+                                            rel="noopener">Open LinkedIn Profile</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN: a simple contact form. -->
+                    <!-- It uses action="mailto:..." with enctype="text/plain", which opens the visitor's -->
+                    <!-- own email app pre-filled with the form data — no backend/JavaScript needed. -->
+                    <!-- (Note: this mailto-form approach is unreliable on many browsers/devices since it -->
+                    <!-- depends on a configured desktop email client; a backend or form service is more robust.) -->
+                    <div class="col-lg-7">
+                        <div class="contact-box">
+                            <h2>Send A Message</h2>
+                            <form action="mailto:atharvahalam4@gmail.com" method="post" enctype="text/plain">
+                                <!-- Name + Email fields side by side on medium screens and up. -->
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label" for="name">Name</label>
+                                        <input id="name" class="form-control" type="text" name="name"
+                                            placeholder="Your name">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label" for="email">Email</label>
+                                        <input id="email" class="form-control" type="email" name="email"
+                                            placeholder="Your email">
+                                    </div>
+                                </div>
+                                <!-- Subject line field -->
+                                <div class="mb-3">
+                                    <label class="form-label" for="subject">Subject</label>
+                                    <input id="subject" class="form-control" type="text" name="subject"
+                                        placeholder="Opportunity or project discussion">
+                                </div>
+                                <!-- Main message textarea -->
+                                <div class="mb-4">
+                                    <label class="form-label" for="message">Message</label>
+                                    <textarea id="message" class="form-control" name="message"
+                                        placeholder="Write your message"></textarea>
+                                </div>
+                                <!-- Submitting triggers the mailto: action and opens the visitor's email client. -->
+                                <button class="btn-main border-0" type="submit">Send Email</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- Final call-to-action with quick links for email, LinkedIn and projects. -->
+        <!-- ============================================================ -->
+        <section class="section">
+            <div class="container">
+                <div class="card-box text-center">
+                    <!-- Closing heading and message encouraging visitors to reach out. -->
+                    <h2>Ready to discuss an opportunity?</h2>
+                    <p class="mx-readable">I am seeking internship and entry-level software developer opportunities
+                        where I can contribute, gain practical experience, and continuously improve my technical skills.
+                    </p>
+                    <div class="action-row justify-content-center">
+                        <a class="btn-main" href="mailto:atharvahalam4@gmail.com">Email Me</a>
+                        <a class="btn-soft" href="https://www.linkedin.com/in/atharv-halam-618b17366/" target="_blank"
+                            rel="noopener">LinkedIn</a>
+                        <a class="btn-soft" href="projects.html">View Projects</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================================ -->
+    <!-- Shared footer used at the bottom of every page. -->
+    <!-- ============================================================ -->
+    <footer class="footer">
+        <div class="container">
+            <p>Designed and developed by Atharva. 2026.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,294 @@
+<!--
+    ================================================================
+    Skills Page (skills.html)
+    ----------------------------------------------------------------
+    Structure overview:
+      1. <head>   - meta tags, page title, Bootstrap + custom CSS
+      2. <header> - shared site navigation ("Skills" marked active)
+      3. <main>
+           a. Intro section       - heading + short summary (centered)
+           b. Skill progress bars - Frontend card + Programming/Backend card
+           c. Skill Areas         - 4 scan-friendly cards on practical skills
+           d. Tools I Use         - grid of tool cards (editor, Git, etc.)
+      4. <footer> - shared site footer (same on every page)
+    Uses Bootstrap 5's grid system (container/row/col-*) for layout,
+    with custom classes (defined in style.css) for colors/spacing/cards.
+    ================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic page settings and SEO description for the Skills page. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Technical skills of Atharva including HTML, CSS, Bootstrap, JavaScript, Python, Django, MySQL, Git and GitHub.">
+    <title>Skills | Atharva</title>
+    <!-- Bootstrap provides the responsive columns and spacing helpers. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Main portfolio stylesheet for colors, cards, progress bars and responsiveness. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ============================================================ -->
+    <!-- Shared site navigation. The Skills link is marked active on this page. -->
+    <!-- ============================================================ -->
+    <header class="site-nav">
+        <div class="container nav-inner">
+            <!-- Logo/brand link back to the home page. -->
+            <a class="brand" href="index.html">Atharva<span>.</span></a>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <!-- "active" class highlights that the user is currently on the Skills page. -->
+                <a class="active" href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ============================================================ -->
+        <!-- Page intro section that describes the overall skill direction. -->
+        <!-- text-center centers all content in this section. -->
+        <!-- ============================================================ -->
+        <section class="section text-center">
+            <div class="container">
+                <span class="eyebrow">Technical Skills</span>
+                <h1 class="page-title">The skills I am developing to become a <span class="highlight">full-stack
+                        developer</span>.</h1>
+                <p class="lead-text mx-readable">My strongest area is frontend development, where I build responsive
+                    websites using HTML, CSS, and Bootstrap. I am currently learning JavaScript and plan to learn React
+                    next. After that, I will continue with Python, Django, and MySQL to develop my backend skills and
+                    build complete full-stack web applications.</p>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- Skill progress cards. Inline width values control each progress bar length. -->
+        <!-- Two cards side by side (col-lg-6): Frontend skills and Backend/Database skills. -->
+        <!-- Each ".skill-row" is one skill: a label + level text on top, and a bar below it. -->
+        <!-- The bar's fill percentage comes from the inline "style=width: X%;" on ".skill-fill" -->
+        <!-- — to change how "full" a bar looks, just edit that percentage. -->
+        <!-- ============================================================ -->
+        <section class="section-sm">
+            <div class="container">
+                <div class="row g-4">
+
+                    <!-- LEFT CARD: Frontend skill bars -->
+                    <div class="col-lg-6">
+                        <div class="card-box">
+                            <h2>Frontend Development</h2>
+
+                            <!-- HTML5: 95% filled, labeled "Strong" -->
+                            <div class="skill-row">
+                                <div class="skill-top"><span>HTML5</span><span>Strong</span></div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" style="width: 95%;"></div>
+                                </div>
+                            </div>
+                            <!-- CSS3:90% filled, labeled "Strong" -->
+                            <div class="skill-row">
+                                <div class="skill-top"><span>CSS3</span><span>Strong</span></div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <!-- Bootstrap: 90% filled, labeled "Strong" -->
+                            <div class="skill-row">
+                                <div class="skill-top"><span>Bootstrap</span><span>Strong</span></div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <!-- JavaScript: 50% filled, labeled "Intermediate" -->
+                            <div class="skill-row">
+                                <div class="skill-top"><span>JavaScript</span><span>Learning</span></div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" style="width: 50%;"></div>
+                                </div>
+                            </div>
+                            <!-- React: 5% filled, labeled "Planned" -->
+                            <div class="skill-row">
+                                <div class="skill-top"><span>React</span><span>Planned</span></div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" style="width: 5%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT CARD: Programming Fundamentals ,Backend and database skill bars -->
+                    <div class="col-lg-6">
+                        <div class="card-box">
+
+                            <h2>Programming Fundamentals</h2>
+                            <!-- C++: 10% filled, labeled "Basic Knowledge" -->
+                            <div class="skill-row">
+                                <div class="skill-top"><span>C++</span><span>Basic Knowledge</span></div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" style="width: 10%;"></div>
+                                </div>
+                            </div>
+
+                            <!-- Java: 10% filled, labeled "Basic Knowledge" -->
+                            <div class="skill-row">
+                                <div class="skill-top"><span>Java</span><span>Basic Knowledge</span></div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" style="width: 10%;"></div>
+                                </div>
+                            </div>
+
+
+                            <!-- Second subgroup within the same card: backend/database skills still in the planning stage. -->
+                            <h2>Backend Learning Plan</h2>
+                            <!-- Python: 10% filled, labeled "Basic Knowledge" -->
+                            <div class="skill-row">
+                                <div class="skill-top"><span>Python</span><span>Basic Knowledge</span></div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" style="width: 10%;"></div>
+                                </div>
+                            </div>
+                            <!-- Django: 0% filled, labeled "Planned" -->
+                            <div class="skill-row">
+                                <div class="skill-top"><span>Django</span><span>Planned</span></div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                            <!-- MySQL: 10% filled, labeled "Basic Knowledge" -->
+                            <div class="skill-row">
+                                <div class="skill-top"><span>MySQL</span><span>Basic Knowledge</span></div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" style="width: 10%;"></div>
+                                </div>
+                            </div>
+                            <!-- CRUD Concepts: 0% filled, labeled "Planned" -->
+                            <div class="skill-row">
+                                <div class="skill-top"><span>CRUD Concepts</span><span>Planned</span></div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- Practical skill areas shown as scan-friendly cards. -->
+        <!-- Four cards in a row on large screens (col-lg-3), two per row on tablets (col-md-6). -->
+        <!-- ============================================================ -->
+        <section class="section">
+            <div class="container">
+                <div class="section-heading center">
+                    <h2>Skill Areas</h2>
+                    <p>The skills I am developing through hands-on projects and continuous learning.</p>
+                </div>
+                <div class="row g-4">
+                    <!-- Area 1: Responsive layouts -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card-box">
+                            <h3>Responsive Design</h3>
+                            <p>Creating responsive websites that provide a seamless experience across mobile, tablet,
+                                and desktop devices.</p>
+                        </div>
+                    </div>
+                    <!-- Area 2: UI/visual polish -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card-box">
+                            <h3>Clean UI</h3>
+                            <p>Creating clean and user-friendly interfaces using effective spacing, typography, and
+                                visual hierarchy.</p>
+                        </div>
+                    </div>
+                    <!-- Area 3: Database fundamentals -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card-box">
+                            <h3>Database Basics</h3>
+                            <p>Learning database fundamentals by practicing tables, basic SQL queries, relationships,
+                                and simple data management.</p>
+                        </div>
+                    </div>
+                    <!-- Area 4: Version control -->    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card-box">
+                            <h3>Git Workflow</h3>
+                            <p>Using Git and GitHub to manage code, track changes, and maintain project versions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- Tools list displayed as reusable pill tags. -->
+        <!-- Reuses the same ".tag-list" component seen on other pages (e.g. tech stack tags). -->
+        <!-- "justify-content-center" centers the tags horizontally. -->
+        <!-- ============================================================ -->
+        <section class="section-sm">
+            <div class="container">
+                <div class="section-heading center">
+                    <h2>Tools I Use</h2>
+                    <p>The tools I use to learn, build, and manage my web development projects.</p>
+                </div>
+
+                <div class="tool-grid">
+
+                    <!-- Tool 1: Code editor -->
+                    <div class="tool-card">
+                        <h4>VS Code</h4>
+                        <p>My primary code editor for writing, editing, and debugging web applications.</p>
+                    </div>
+
+                    <!-- Tool 2: Version control -->
+                    <div class="tool-card">
+                        <h4>Git</h4>
+                        <p>Used for version control to track code changes and manage project history.</p>
+                    </div>
+
+                    <!-- Tool 3: Repository hosting -->
+                    <div class="tool-card">
+                        <h4>GitHub</h4>
+                        <p>Used to host repositories, manage projects, and showcase my work.</p>
+                    </div>
+
+                    <!-- Tool 4: Browser debugging -->
+                    <div class="tool-card">
+                        <h4>Chrome DevTools</h4>
+                        <p>Used to inspect, debug, and test responsive web pages during development.</p>
+                    </div>
+
+                    <!-- Tool 5: Reference documentation -->
+                    <div class="tool-card">
+                        <h4>Bootstrap Documentation</h4>
+                        <p>Used as a reference for responsive layouts, components, and utilities.</p>
+                    </div>
+
+                    <!-- Tool 6: AI-assisted learning -->
+                    <div class="tool-card">
+                        <h4>AI Learning Tools</h4>
+                        <p>Used to learn programming concepts, solve coding problems, and improve development skills.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================================ -->
+    <!-- Shared footer used at the bottom of every page. -->
+    <!-- ============================================================ -->
+    <footer class="footer">
+        <div class="container">
+            <p>Designed and developed by Atharva. 2026.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
